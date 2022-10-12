@@ -16,7 +16,10 @@ public class Main {
 
         System.out.println("Enter the name of the person to look up: ");
         String choice = sc.nextLine();
-
-        System.out.println(choice + " has the phone number: " + phoneBook.get(choice));
+        if (phoneBook.containsKey(choice)) {
+            System.out.println(choice + " has the phone number: " + phoneBook.get(choice));
+        } else{
+            System.out.println(choice + " isn't in the phone book.");
+        }
     }
 }
