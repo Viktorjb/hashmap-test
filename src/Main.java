@@ -16,5 +16,7 @@ public class Main {
 
         System.out.println("Enter the name of the person to look up: ");
         String choice = sc.nextLine();
+
+        System.out.println(choice + " has the phone number: " + phoneBook.get(choice));
     }
 }
