@@ -14,7 +14,7 @@ public class Main {
             phoneBook.put("Jenny", "0792484883");
             phoneBook.put("Bob", "0784739874");
 
-            System.out.println("(Enter 'quit' if you wish to quit)");
+            System.out.println("(Enter 'quit' if you wish to quit, or 'add' if you wish to add a name)");
             System.out.println("Enter the name of the person to look up: ");
             String choice = sc.nextLine();
             if (phoneBook.containsKey(choice)) {
@@ -22,6 +22,13 @@ public class Main {
             } else if(choice.equals("quit")){
                 System.out.println("Quitting.");
                 break;
+            } else if(choice.equals("add")){
+                System.out.println("Enter the name or whom you'd like to add: ");
+                choice = sc.nextLine();
+                System.out.println("Enter " + choice + "'s number: ");
+                String theNumber = sc.nextLine();
+                phoneBook.put(choice, theNumber);
+                System.out.println("Added.");
             } else {
                 System.out.println(choice + " isn't in the phone book.");
             }
